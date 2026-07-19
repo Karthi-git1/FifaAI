@@ -8,7 +8,9 @@ import Pippo2 from "../assets/Pippo2.png";
 import Pippo3 from "../assets/Pippo3.png";
 import Pippo4 from "../assets/Pippo4.png";
 
-const API = ""; // Vite proxy forwards /ask and /live to backend:8000
+const API =
+  import.meta.env.VITE_API_BASE_URL ||
+  "http://localhost:8000";
 
 const LANG_CODE = {
   "English": "en-US", "Español": "es-ES", "Français": "fr-FR",
