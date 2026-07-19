@@ -32,12 +32,16 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+# ── CORS must be added BEFORE rate-limit middleware ───────────────────────────
+# Browsers send an OPTIONS preflight before every cross-origin POST.
+# If rate-limiting runs first it can reject that preflight before CORS headers
+# are added, making the browser report "Failed to fetch" with no useful detail.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
-        "https://fifa-ai-kappa.vercel.app",    # no trailing slash — browsers send it without
+        "https://fifa-ai-kappa.vercel.app",   # Vercel frontend — no trailing slash
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -45,23 +49,27 @@ app.add_middleware(
 )
 
 
-# Simple in-memory rate limiting since slowapi failed to install
-_rate_limits = {}
+# ── Rate limiting (runs after CORS so OPTIONS preflights are never blocked) ───
+_rate_limits: dict = {}
 
 @app.middleware("http")
 async def rate_limit_middleware(request: Request, call_next):
+    # Always let CORS preflight through — it carries no credentials anyway
+    if request.method == "OPTIONS":
+        return await call_next(request)
+
     client_ip = request.client.host if request.client else "unknown"
     now = time.time()
-    
+
     if client_ip not in _rate_limits:
         _rate_limits[client_ip] = []
-        
-    # Keep requests from last 60 seconds
+
+    # Keep only requests from the last 60 seconds
     _rate_limits[client_ip] = [t for t in _rate_limits[client_ip] if now - t < 60]
-    
-    if len(_rate_limits[client_ip]) > 30: # 30 requests per minute
+
+    if len(_rate_limits[client_ip]) >= 30:  # 30 requests per minute
         return JSONResponse(status_code=429, content={"detail": "Too many requests"})
-        
+
     _rate_limits[client_ip].append(now)
     return await call_next(request)
 
@@ -124,7 +132,7 @@ def ask(body: AskRequest):
         if not profile.get("gate") and profile.get("seat"):
             profile["gate"] = gate_for_profile(profile)
 
-        # Input Sanitization
+        # Input sanitization
         banned_phrases = ["ignore previous", "system prompt", "jailbreak", "forget all"]
         if len(body.query) > 500:
             raise ValueError("Query too long. Please limit to 500 characters.")
@@ -149,4 +157,6 @@ def ask(body: AskRequest):
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    # Railway injects PORT env var (typically 8080). Fall back to 8000 for local dev.
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=True)
