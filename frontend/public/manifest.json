@@ -1,0 +1,16 @@
+{
+  "name": "Pippo — FIFA 2026 AI",
+  "short_name": "Pippo",
+  "description": "Your Official FIFA 2026 Stadium AI Companion",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#021A11",
+  "theme_color": "#18D264",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

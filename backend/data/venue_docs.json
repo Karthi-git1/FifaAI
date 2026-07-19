@@ -1,0 +1,92 @@
+[
+  {
+    "id": "emergency-sos",
+    "category": "emergency",
+    "text": "EMERGENCY: Nearest emergency exits are marked in red on all concourse maps. From Section 214, use Exit East-2 (step-free, 4 min) or Exit East-1 (3 min, stairs). First aid stations are located at Gate A Level 1, Gate C Level 1 (main), and Gate D Level 1. Stadium security can be reached at any staff point or by calling the in-stadium emergency line. AED defibrillators are mounted near Gate B Club Level and Gate C main concourse. In case of fire or evacuation, follow illuminated green exit signs and do not use elevators. Security staff in high-visibility vests are stationed at all four gate concourses."
+  },
+  {
+    "id": "gate-a",
+    "category": "navigation",
+    "text": "Gate A is on the north side of Pippo Stadium. Sections 101-120 enter here. Average walk from Gate A to Section 214 (east upper level) is 8 minutes via the north elevator bank. During halftime, Gate A wait times typically double."
+  },
+  {
+    "id": "gate-b",
+    "category": "navigation",
+    "text": "Gate B is on the northeast corner. Sections 121-140 and club level north use Gate B. Gate B has the shortest path to Sections 200-220 via the east concourse escalator."
+  },
+  {
+    "id": "gate-c",
+    "category": "navigation",
+    "text": "Gate C is on the east side, main fan entrance. Sections 201-230 and 214 specifically map to Gate C. From plaza to Section 214: enter Gate C, turn left at Concourse Level 2, follow signs to Section 214 (upper east). Typical walk: 6 minutes when crowds are moderate."
+  },
+  {
+    "id": "gate-d",
+    "category": "navigation",
+    "text": "Gate D is on the south side. Sections 231-260 enter here. Gate D connects to the south food court and family restrooms. Less crowded than Gate C during pre-match hour."
+  },
+  {
+    "id": "security-bagcheck",
+    "category": "crowd",
+    "text": "Bag check and security screening are separate from the general gate queue at all four gates. Clear bags only, max 12x12x6 inches. Security wait is typically shortest at Gate B and longest at Gate C during the pre-match hour. Metal detectors add roughly 2-3 minutes per fan at busy gates."
+  },
+  {
+    "id": "accessible-routes",
+    "category": "accessibility",
+    "text": "Step-free accessible routes: All gates have ADA ramps. Section 214 wheelchair route: Gate C → Elevator Bank East (near Section 208) → Level 200 concourse → ramp to Row access for 214. Avoid escalators between Gates A and C. Accessible seating companions can use the same route. Sensory-friendly quiet room is near Gate B, Level 1."
+  },
+  {
+    "id": "restrooms-north",
+    "category": "crowd",
+    "text": "North restrooms (near Gate A, Section 110): 4 stalls, usually moderate wait. East restrooms (Gate C, Section 205): 8 stalls, busiest at halftime (15+ min wait). South restrooms (Gate D): 6 stalls, typically low wait except post-match."
+  },
+  {
+    "id": "restrooms-northeast",
+    "category": "crowd",
+    "text": "Northeast restrooms (Gate B, Club Level): 5 stalls, generally the shortest wait of all four restroom locations since Gate B has lower foot traffic. Good alternative to East restrooms during halftime rush."
+  },
+  {
+    "id": "exits",
+    "category": "navigation",
+    "text": "Nearest exits from Section 214: Exit East-2 (4 min walk, step-free via elevator) or Exit East-1 (3 min, includes stairs). Post-match, Exit East-2 has shorter queues. Emergency exits are marked in red on all concourse maps."
+  },
+  {
+    "id": "shuttles",
+    "category": "transportation",
+    "text": "Stadium shuttles: Downtown Express departs Lot P2 every 12 minutes. Last shuttle to downtown is 45 minutes after final whistle. Meadowlands Rail connects to Secaucus Junction — check live delay board. Walking to Lot P2 from Gate C takes 10 minutes."
+  },
+  {
+    "id": "parking",
+    "category": "transportation",
+    "text": "Three main lots serve the stadium: Lot P1 (north, near Gate A), Lot P2 (east, near Gate C, also the shuttle pickup point), and Lot P3 (south, near Gate D, usually the least full and a good overflow option once P1 or P2 near capacity). Lots typically fill in order P2, then P1, then P3."
+  },
+  {
+    "id": "weather-tips",
+    "category": "crowd",
+    "text": "Pippo Stadium is open-air. In light rain or high heat, concourse crowding increases as fans move under cover, especially on Level 200 East. On hot days, Green Bowl 210 and hydration stations near Gate D see longer lines. Check live weather before recommending outdoor fan-zone activities."
+  },
+  {
+    "id": "wifi",
+    "category": "multilingual",
+    "text": "Stadium-wide fan WiFi (network: PippoFanNet) is free and available at all sections and concourses. Load is heaviest during halftime and right after full time when fans post to social media; expect slower speeds in those windows."
+  },
+  {
+    "id": "food-sustainability",
+    "category": "sustainability",
+    "text": "Food near Section 214: East Concourse Tacos (reusable packaging, local sourcing), Grill Station 208 (standard packaging), Green Bowl 210 (plant-based, compostable containers — lowest carbon option). For distances under 8 minutes walk, walking beats shuttle on carbon footprint."
+  },
+  {
+    "id": "fan-zones",
+    "category": "navigation",
+    "text": "Fan zones: Brazil Fan Zone is near Gate C plaza (pre-match events, 2 hours before kickoff). Official merchandise mega-store is west concourse near Gate A. FIFA Pavilion interactive zone is south plaza near Gate D."
+  },
+  {
+    "id": "crowd-tips",
+    "category": "crowd",
+    "text": "Crowd management tips: Arrive 90 minutes early for Gate C. If Gate C wait reaches or exceeds 15 minutes, reroute to Gate B and walk the east concourse (adds 3 min but saves 10+ min queue). Halftime rush peaks at minutes 45-50 — use north or northeast restrooms, or wait until minute 52. Parking lots should be treated the same way: if Lot P2 is near full, route fans to Lot P3."
+  },
+  {
+    "id": "multilingual",
+    "category": "multilingual",
+    "text": "Stadium signage is in English, Spanish, French, Portuguese, and Arabic. Staff interpreters are stationed at Gates A, C, and D. The AI assistant can respond in any language the fan prefers."
+  }
+]

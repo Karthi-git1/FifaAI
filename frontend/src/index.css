@@ -1,0 +1,83 @@
+/* Global reset & base */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Prevent browser UA stylesheet from applying white/grey hover backgrounds on buttons */
+button { -webkit-appearance: none; appearance: none; }
+button:hover { background-color: unset; }
+
+:root {
+  --bg:        #021A11;
+  --bg2:       #052619;
+  --card:      #0A3D28;
+  --card2:     #115237;
+  --border:    #19754F;
+  --red:       #C81E3A;
+  --violet:    #7C3AED;
+  --blue:      #109E56;
+  --lime:      #B6E801;
+  --teal:      #18D264;
+  --gold:      #D4AF37;
+  --amber:     #F59E0B;
+  --text:      #F2FBF5;
+  --muted:     #A6D4BB;
+  --online:    #18D264;
+  --offline:   #6B7280;
+  --radius:    16px;
+  --radius-sm: 10px;
+
+  /* Gradients as CSS vars for easy reuse */
+  --g-gold:       linear-gradient(135deg, #F5C518 0%, #D4AF37 50%, #B8860B 100%);
+  --g-accent:     linear-gradient(90deg, #18D264, #109E56);
+  --g-glass:      rgba(10, 61, 40, 0.72);
+  --g-user-bubble: linear-gradient(135deg, #7C3AED 0%, #109E56 100%);
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+/* High-contrast accessibility override */
+body.hc-mode {
+  --bg:     #000000;
+  --bg2:    #0A0A0A;
+  --card:   #111111;
+  --card2:  #1A1A1A;
+  --border: #555555;
+  --text:   #FFFFFF;
+  --muted:  #DDDDDD;
+  --teal:   #00FFD4;
+  --lime:   #CCFF00;
+  --gold:   #FFD700;
+  --violet: #A78BFA;
+}
+
+body.hc-mode * { letter-spacing: 0.02em; }
+
+/* ── Animations ──────────────────────────────────────────────────────────── */
+@keyframes fadeIn   { from { opacity:0; transform:translateY(12px) } to { opacity:1; transform:translateY(0) } }
+@keyframes pulse    { 0%,100%{opacity:.5} 50%{opacity:1} }
+@keyframes spin     { to { transform: rotate(360deg) } }
+@keyframes float    { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+@keyframes ripple   { 0%{transform:scale(0.8);opacity:1} 100%{transform:scale(2.4);opacity:0} }
+@keyframes slideUp  { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+@keyframes slideIn  { from{opacity:0;transform:translateX(-16px)} to{opacity:1;transform:translateX(0)} }
+@keyframes glow     { 0%,100%{box-shadow:0 0 20px #18D26460} 50%{box-shadow:0 0 40px #18D264AA,0 0 60px #B6E80160} }
+@keyframes goldGlow { 0%,100%{box-shadow:0 0 16px #D4AF3740} 50%{box-shadow:0 0 32px #F5C51880,0 0 48px #D4AF3740} }
+@keyframes haloSpin { to{ transform: rotate(360deg) } }
+@keyframes blink    { 0%,100%{opacity:1} 50%{opacity:0.3} }
+@keyframes shimmer  {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+@keyframes popIn    { 0%{transform:scale(0.85);opacity:0} 70%{transform:scale(1.04)} 100%{transform:scale(1);opacity:1} }

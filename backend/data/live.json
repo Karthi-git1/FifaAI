@@ -1,0 +1,133 @@
+{
+  "venue": "Pippo Stadium",
+  "updated_at": "2026-07-19T21:42:10.000000+00:00",
+  "match": {
+    "event": "FIFA World Cup 2026 — Group Stage",
+    "home_team": "ENG",
+    "away_team": "BRA",
+    "home_score": 2,
+    "away_score": 1,
+    "minute": 73,
+    "phase": "85th_minute",
+    "score": "2-1",
+    "halftime_rush": false,
+    "attendance_pct": 94
+  },
+  "weather": {
+    "condition": "partly_cloudy",
+    "temp_f": 78,
+    "wind_mph": 6,
+    "precip_chance_pct": 10,
+    "updated_at": "2026-07-19T21:35:00.000000+00:00"
+  },
+  "gates": {
+    "Gate A": {
+      "location": "north",
+      "sections": "101-120",
+      "wait_minutes": 9,
+      "security_wait_minutes": 4,
+      "level": "moderate",
+      "throughput": "normal",
+      "status": "open",
+      "last_updated": "2026-07-19T21:41:40.000000+00:00"
+    },
+    "Gate B": {
+      "location": "northeast",
+      "sections": "121-140, club level north",
+      "wait_minutes": 5,
+      "security_wait_minutes": 2,
+      "level": "low",
+      "throughput": "normal",
+      "status": "open",
+      "last_updated": "2026-07-19T21:41:40.000000+00:00"
+    },
+    "Gate C": {
+      "location": "east",
+      "sections": "201-230",
+      "wait_minutes": 15,
+      "security_wait_minutes": 8,
+      "level": "high",
+      "throughput": "slow",
+      "status": "open",
+      "last_updated": "2026-07-19T21:41:55.000000+00:00"
+    },
+    "Gate D": {
+      "location": "south",
+      "sections": "231-260",
+      "wait_minutes": 10,
+      "security_wait_minutes": 5,
+      "level": "moderate",
+      "throughput": "normal",
+      "status": "open",
+      "last_updated": "2026-07-19T21:41:40.000000+00:00"
+    }
+  },
+  "concourses": {
+    "Level 100 (West/North)": { "crowd_density": "moderate" },
+    "Level 200 (East)": { "crowd_density": "high" },
+    "Level 200 (South)": { "crowd_density": "moderate" },
+    "Club Level North": { "crowd_density": "low" }
+  },
+  "restrooms": {
+    "North (Gate A, Section 110)": {
+      "stalls_total": 4,
+      "wait_minutes": 4,
+      "status": "available"
+    },
+    "Northeast (Gate B, Club Level)": {
+      "stalls_total": 5,
+      "wait_minutes": 3,
+      "status": "available"
+    },
+    "East (Gate C, Section 205)": {
+      "stalls_total": 8,
+      "wait_minutes": 7,
+      "status": "busy"
+    },
+    "South (Gate D)": {
+      "stalls_total": 6,
+      "wait_minutes": 5,
+      "status": "available"
+    }
+  },
+  "parking": {
+    "Lot P1 (North)": { "fill_pct": 88, "status": "near_full" },
+    "Lot P2 (East, shuttle pickup)": { "fill_pct": 96, "status": "near_full" },
+    "Lot P3 (South)": { "fill_pct": 61, "status": "available" }
+  },
+  "concessions": {
+    "East Concourse Tacos (Sec 214 area)": { "wait_minutes": 6, "status": "open" },
+    "Grill Station 208": { "wait_minutes": 9, "status": "open" },
+    "Green Bowl 210": { "wait_minutes": 4, "status": "open" },
+    "South Food Court (Gate D)": { "wait_minutes": 5, "status": "open" }
+  },
+  "transit": {
+    "shuttle_downtown": {
+      "next_departure_min": 5,
+      "delay_min": 0,
+      "status": "on_time",
+      "pickup": "Lot P2"
+    },
+    "meadowlands_rail": {
+      "next_departure_min": 18,
+      "delay_min": 3,
+      "status": "delayed",
+      "connects_to": "Secaucus Junction"
+    }
+  },
+  "connectivity": {
+    "stadium_wifi": { "status": "operational", "load": "high" }
+  },
+  "accessibility": {
+    "elevators": {
+      "East Elevator Bank (near Section 208)": "operational",
+      "North Elevator Bank": "operational"
+    },
+    "quiet_room_gate_b": "available"
+  },
+  "alerts": [
+    "Gate C queue building — consider Gate B + east concourse walk",
+    "Lot P2 nearing capacity — allow extra time or use Lot P3",
+    "Meadowlands Rail delayed 3 min — check board before departing"
+  ]
+}
