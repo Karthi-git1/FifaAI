@@ -756,7 +756,11 @@ export default function NavigationScreen({ profile, onReset, updateProfile }) {
         margin: "0 auto",
         width: "100%",
         maxWidth: 540,
-        height: "100vh",
+        /* 100dvh = dynamic viewport height — shrinks when mobile browser chrome
+           appears/disappears, so the input bar stays visible. Falls back to
+           100vh on browsers that don't support dvh yet (all modern ones do). */
+        height: "100dvh",
+        minHeight: "-webkit-fill-available",
         background: T.bg, 
         boxShadow: "0 0 64px rgba(0,0,0,0.6)",
         display: "flex",
@@ -1078,7 +1082,8 @@ export default function NavigationScreen({ profile, onReset, updateProfile }) {
 
         {/* ── Input bar ── */}
         <div style={{
-          padding: "8px 24px 16px",
+          padding: "8px 24px 0",
+          paddingBottom: "calc(16px + env(safe-area-inset-bottom, 0px))",
           background: `linear-gradient(0deg, ${T.bg} 70%, transparent)`,
           flexShrink: 0,
         }}>
@@ -1174,7 +1179,7 @@ export default function NavigationScreen({ profile, onReset, updateProfile }) {
             send(query);
           }}
           style={{
-            position: "absolute", bottom: 106, right: 14, zIndex: 100,
+            position: "absolute", bottom: "calc(106px + env(safe-area-inset-bottom, 0px))", right: 14, zIndex: 100,
             width: 52, height: 52, borderRadius: "50%",
             background: "rgba(200,20,30,0.15)",
             border: "2px solid #FF3333",
