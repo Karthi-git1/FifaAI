@@ -8,7 +8,11 @@ import Pippo2 from "../assets/Pippo2.png";
 import Pippo3 from "../assets/Pippo3.png";
 import Pippo4 from "../assets/Pippo4.png";
 
-
+// In dev the Vite proxy rewrites relative URLs → localhost:8000, so API stays "".
+// In production (Vercel) we hit the Railway backend directly.
+const API = import.meta.env.VITE_API_URL ?? (
+  import.meta.env.DEV ? "" : "https://fifaai-production.up.railway.app"
+);
 
 const LANG_CODE = {
   "English": "en-US", "Español": "es-ES", "Français": "fr-FR",
